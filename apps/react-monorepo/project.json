@@ -1,7 +1,7 @@
 {
-  "name": "react-monorepo",
+  "name": "monorepo-compression",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/react-monorepo/src",
+  "sourceRoot": "apps/monorepo-compression/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/react-monorepo"
+        "outputPath": "dist/apps/monorepo-compression"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "react-monorepo:build"
+        "buildTarget": "monorepo-compression:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "react-monorepo:build:development",
+          "buildTarget": "monorepo-compression:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "react-monorepo:build:production",
+          "buildTarget": "monorepo-compression:build:production",
           "hmr": false
         }
       }
@@ -41,14 +41,14 @@
       "executor": "@nx/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "react-monorepo:build"
+        "buildTarget": "monorepo-compression:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "react-monorepo:build:development"
+          "buildTarget": "monorepo-compression:build:development"
         },
         "production": {
-          "buildTarget": "react-monorepo:build:production"
+          "buildTarget": "monorepo-compression:build:production"
         }
       }
     },
@@ -57,14 +57,14 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/react-monorepo"
+        "reportsDirectory": "../../coverage/apps/monorepo-compression"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/react-monorepo/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/monorepo-compression/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/react-monorepo',
+  cacheDir: '../../node_modules/.vite/monorepo-compression',
 
   server: {
     port: 4200,
